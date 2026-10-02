@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Receipt and SKU Generator</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="receipt.html">Receipt Generator</a>
+            <a href="sku.html">SKU Generator</a>
+        </nav>
+    </header>
+
+    <main class="generator">
+        <h2>Receipt Generator</h2>
+
+        <div class="card">
+            <h3>Customer Information</h3>
+
+            <label for="customer">Customer Name</label>
+            <input type="text" id="customer" placeholder="Enter customer name">
+
+            <h3>Choose Your Items</h3>
+
+            <div class="menu-item">
+                <label for="item1">
+                    <input type="checkbox" id="item1" value="100">
+                    Burger
+                </label>
+                <span>₱100.00</span>
+            </div>
+
+            <div class="menu-item">
+                <label for="item2">
+                    <input type="checkbox" id="item2" value="50">
+                    Fries
+                </label>
+                <span>₱50.00</span>
+            </div>
+
+            <div class="menu-item">
+                <label for="item3">
+                    <input type="checkbox" id="item3" value="80">
+                    Sandwich
+                </label>
+                <span>₱80.00</span>
+            </div>
+
+            <div class="menu-item">
+                <label for="item4">
+                    <input type="checkbox" id="item4" value="60">
+                    Juice
+                </label>
+                <span>₱60.00</span>
+            </div>
+
+            <div class="menu-item">
+                <label for="item5">
+                    <input type="checkbox" id="item5" value="40">
+                    Water
+                </label>
+                <span>₱40.00</span>
+            </div>
+
+            <button py-click="create_order">Generate Receipt</button>
+        </div>
+
+        <div id="show"></div>
+    </main>
+
+    <footer>
+        <p>ICT 10 Project | Receipt and SKU Generator</p>
+    </footer>
+
+    <script type="py" src="./main.py"></script>
+
+</body>
+</html>

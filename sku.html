@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKU Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Receipt and SKU Generator</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="receipt.html">Receipt Generator</a>
+            <a href="sku.html">SKU Generator</a>
+        </nav>
+    </header>
+
+    <main class="generator">
+        <h2>SKU Generator</h2>
+
+        <div class="card">
+            <h3>Product Information</h3>
+
+            <label for="category">Product Category</label>
+            <select id="category">
+                <option value="">Select a category</option>
+                <option value="Food">Food</option>
+                <option value="Drink">Drinks</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Accessories">Accessories</option>
+            </select>
+
+            <label for="product_name">Product Name</label>
+            <input type="text" id="product_name" placeholder="Enter product name">
+
+            <label for="quantity">Stock Quantity</label>
+            <input type="number" id="quantity" placeholder="Enter stock quantity" min="0">
+
+            <button py-click="SKU_generator">Generate SKU</button>
+        </div>
+
+        <div id="sku_output"></div>
+    </main>
+
+    <footer>
+        <p>ICT 10 Project | Receipt and SKU Generator</p>
+    </footer>
+
+    <script type="py" src="./main.py"></script>
+
+</body>
+</html>
